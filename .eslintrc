@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "prettier",
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier", "@typescript-eslint", "import", "react"],
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/dot-notation": "error",
+    "react/jsx-filename-extension": [1, {"extensions": [".jsx", ".tsx"]}],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {"devDependencies": ["**/*.config.ts", "**/*.test.ts"]}
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
